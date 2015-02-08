@@ -5,7 +5,9 @@
 # Notes: This method will run a guest program with arguments on a Windows guest VM via VIX SDK/API.
 #
 # Requirements:
-#   a) The latest VIX SDK can be downloaded from: http://www.vmware.com/support/developer/vix-api and must be installed on each CloudForms Appliance for this script to function
+#   a) The latest VIX SDK can be downloaded from: http://www.vmware.com/support/developer/vix-api and 
+#    must be installed on each CloudForms Appliance for this script to function.  Once the SDK installed,
+#      the following link must be created:  ln -s /usr/lib/vmware-vix/Workstation-10.0.0-and-vSphere-5.5.0/64bit /usr/lib/vmware
 #   b) Guest VM must have VMware Tools running
 #   c) Guest VM must already have the guest_program and it must be executable
 #
@@ -95,13 +97,12 @@ begin
     @vm = $evm.root['miq_provision'].vm
     prov_tags = prov.get_tags
     log(:info, "Inspecting miq_provision tags:<#{prov_tags.inspect}>")
-
-    # look in ws_values for guest_program and guest_program_arguments for dynamic override
-    ws_values = prov.options.fetch(:ws_values, nil)
-    guest_program = ws_values.fetch(:guest_program, nil) unless ws_values.blank?
-    guest_program_arguments = ws_values.fetch(:guest_program_arguments, nil) unless ws_values.blank?
-    log(:info, "Found guest_program from prov.options[:ws_values]: #{guest_program.inspect}") unless guest_program.nil?
-    log(:info, "Found guest_program_arguments from prov.options[:ws_values]: #{guest_program_arguments.inspect}") unless guest_program_arguments.nil?
+    
+    guest_program = prov.get_option(:guest_program) unless prov.get_option(:guest_program).nil?
+    guest_program_arguments = prov.get_option(:guest_program_arguments) unless prov.get_option(:guest_program_arguments).nil?
+    
+    log(:info, "Found guest_program option: #{guest_program.inspect}") unless guest_program.nil?
+    log(:info, "Found guest_program_arguments option: #{guest_program_arguments.inspect}") unless guest_program_arguments.nil?
   else
     log(:warn, "Invalid $evm.root['vmdb_object_type']: #{$evm.root['vmdb_object_type']}")
     exit MIQ_STOP
