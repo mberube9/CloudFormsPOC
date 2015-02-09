@@ -10,7 +10,7 @@
 begin
 
   def log(level, msg)
-    @method = 'allocateFloatingIP'
+    @method = 'getConsoleURL'
     $evm.log(level, "#{@method}: #{msg}")
   end 
 
