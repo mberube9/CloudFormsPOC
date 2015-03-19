@@ -3,7 +3,7 @@ object_type: method
 version: 1.0
 object:
   attributes:
-    name: amazon_CustomizeRequest
+    name: amazon_customizerequest
     display_name: 
     description: 
     scope: instance

@@ -13,12 +13,12 @@ object:
   schema:
   - field:
       aetype: attribute
-      name: satellite
+      name: passwordems
       display_name: 
-      datatype: string
+      datatype: password
       priority: 1
       owner: 
-      default_value: 
+      default_value: v2:{YXT4WLH8qZTblwkV+q7+7g==}
       substitute: true
       message: create
       visibility: 
@@ -33,7 +33,7 @@ object:
       max_time: 
   - field:
       aetype: attribute
-      name: username
+      name: satellite
       display_name: 
       datatype: string
       priority: 2
@@ -53,10 +53,30 @@ object:
       max_time: 
   - field:
       aetype: attribute
+      name: username
+      display_name: 
+      datatype: string
+      priority: 3
+      owner: 
+      default_value: 
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
       name: password
       display_name: 
       datatype: password
-      priority: 3
+      priority: 4
       owner: 
       default_value: 
       substitute: true
@@ -76,7 +96,7 @@ object:
       name: domain
       display_name: 
       datatype: string
-      priority: 4
+      priority: 5
       owner: 
       default_value: 
       substitute: true
@@ -96,7 +116,7 @@ object:
       name: method1
       display_name: 
       datatype: string
-      priority: 5
+      priority: 6
       owner: 
       default_value: 
       substitute: true
@@ -116,7 +136,7 @@ object:
       name: method2
       display_name: 
       datatype: string
-      priority: 6
+      priority: 7
       owner: 
       default_value: 
       substitute: true

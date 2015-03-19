@@ -9,12 +9,12 @@ object:
     description: 
   fields:
   - satellite:
-      value: satellite.example.com
+      value: sat6.local.domb.com
   - username:
       value: admin
   - password:
-      value: v2:{S7SjvoAtfCEoaUhFHjlEig==}
+      value: v2:{4U9m7mmcKqOmJVAOwR0XNA==}
   - domain:
-      value: example.com
+      value: local.domb.com
   - method1:
       value: unsubscribe

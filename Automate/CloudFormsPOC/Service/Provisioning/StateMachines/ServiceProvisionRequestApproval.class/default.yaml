@@ -7,6 +7,4 @@ object:
     name: Default
     inherits: 
     description: 
-  fields:
-  - max_flavor:
-      value: large
+  fields: []
