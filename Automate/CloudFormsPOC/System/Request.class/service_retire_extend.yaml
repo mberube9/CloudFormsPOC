@@ -4,9 +4,9 @@ version: 1.0
 object:
   attributes:
     display_name: 
-    name: ServiceTemplateProvisionRequest_Denied
+    name: service_retire_extend
     inherits: 
     description: 
   fields:
-  - method1:
-      value: ServiceTemplateProvisionRequest_Denied
+  - rel5:
+      value: /Service/Retirement/Email/Service_Retire_Extend

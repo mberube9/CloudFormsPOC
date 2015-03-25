@@ -4,9 +4,9 @@ version: 1.0
 object:
   attributes:
     display_name: 
-    name: ServiceTemplateProvisionRequest_Denied
+    name: OpenStack_Resize_Instance
     inherits: 
     description: 
   fields:
-  - method1:
-      value: ServiceTemplateProvisionRequest_Denied
+  - rel2:
+      value: /Integration/RedHat/OpenStack/Nova/Resize_OpenStack_Instance
