@@ -397,14 +397,8 @@ begin
   log(:info, "CloudForms Automate Method Ended", true)
   exit MIQ_OK
 
-<<<<<<< HEAD
-  miq_request.set_message(quota_message[0..250])
-  $evm.root['ae_result'] = 'error'
-  $evm.object['reason'] = quota_message
-=======
   # Set Ruby rescue behavior
 rescue => err
   log(:error, "[#{err}]\n#{err.backtrace.join("\n")}")
   exit MIQ_ABORT
->>>>>>> 656c6f5c4510985b6520bb8d8a33e4797eca1b73
 end
