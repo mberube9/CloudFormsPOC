@@ -47,7 +47,7 @@ begin
     end
 
     # set to true to default to the admin tenant
-    use_default = true
+    use_default = false
     unless tenant
       tenant = $evm.vmdb(:cloud_tenant).find_by_name('admin') if use_default
       log(:info, "Found tenant: #{tenant.name} via default method") if tenant && use_default
