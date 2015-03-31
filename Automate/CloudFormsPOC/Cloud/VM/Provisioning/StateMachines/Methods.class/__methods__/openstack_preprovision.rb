@@ -132,7 +132,7 @@ begin
 
   add_volumes(ws_values, template)
 
-  # add_affinity_group(ws_values)
+  add_affinity_group(ws_values)
 
   add_networks(ws_values)
 
